@@ -1,0 +1,257 @@
+{"task_id": 11, "completion": "def remove_Occ(s, ch):\n    first_index = s.find(ch)\n    last_index = s.rfind(ch)\n    if first_index == -1 or last_index == -1 or first_index == last_index:\n        return s\n    return s[:first_index] + s[first_index + 1:last_index] + s[last_index + 1:]"}
+{"task_id": 12, "completion": "def sort_matrix(M):\n    return sorted(M, key=sum)"}
+{"task_id": 14, "completion": "import math\n\ndef find_Volume(l, b, h):\n    base_area = 0.5 * b * h\n    volume = base_area * l\n    return volume"}
+{"task_id": 16, "completion": "import re\n\ndef text_lowercase_underscore(text):\n    return bool(re.match(r'^[a-z]+(?:_[a-z]+)*$', text))"}
+{"task_id": 17, "completion": "def square_perimeter(a):\n    return 4 * a"}
+{"task_id": 18, "completion": "def remove_dirty_chars(string, second_string):\n    second_string_set = set(second_string)\n    result = ''.join([char for char in string if char not in second_string_set])\n    return result"}
+{"task_id": 19, "completion": "def test_duplicate(arraynums):\n    return len(arraynums) != len(set(arraynums))"}
+{"task_id": 20, "completion": "import math\n\ndef is_woodall(x):\n    n = 1\n    while True:\n        woodall_number = n * (2 ** n) - 1\n        if woodall_number == x:\n            return True\n        if woodall_number > x:\n            return False\n        n += 1"}
+{"task_id": 56, "completion": "import math\n\ndef reverse_number(n):\n    rev = 0\n    while n > 0:\n        rev = rev * 10 + n % 10\n        n //= 10\n    return rev\n\ndef check(n):\n    return n == 2 * reverse_number(n) - 1"}
+{"task_id": 57, "completion": "import itertools\n\ndef find_Max_Num(arr):\n    max_num = int(''.join(max(itertools.permutations(map(str, arr)))))\n    return max_num"}
+{"task_id": 58, "completion": "def opposite_Signs(x, y):\n    return (x ^ y) < 0"}
+{"task_id": 59, "completion": "def is_octagonal(n):\n    return n * (3 * n - 2)\n\ndef nth_octagonal_number(n):\n    return n * (3 * n - 2)"}
+{"task_id": 61, "completion": "```python\ndef count_Substrings(s):\n    def digit_sum(sub):\n        return sum(int(char) for char in sub)\n    \n    count = 0\n    n = len(s)\n    \n    for i in range(n):\n        for j in range(i + 1, n + 1):\n            sub = s[i:j]\n            if digit_sum(sub) == len(sub):\n                count += 1\n                \n    return count\n```"}
+{"task_id": 62, "completion": "def smallest_num(xs):\n    return min(xs)"}
+{"task_id": 63, "completion": "def max_difference(test_list):\n    max_diff = 0\n    for tpl in test_list:\n        diff = abs(tpl[0] - tpl[1])\n        if diff > max_diff:\n            max_diff = diff\n    return max_diff"}
+{"task_id": 64, "completion": "import operator\n\ndef subject_marks(subjectmarks):\n    return sorted(subjectmarks, key=operator.itemgetter(1))"}
+{"task_id": 65, "completion": "import collections\n\ndef recursive_list_sum(data_list):\n    flat_list = []\n    def flatten(lst):\n        for item in lst:\n            if isinstance(item, collections.abc.Iterable) and not isinstance(item, (str, bytes)):\n                flatten(item)\n            else:\n                flat_list.append(item)\n    flatten(data_list)\n    return sum(flat_list)"}
+{"task_id": 66, "completion": "def pos_count(lst):\n    return len([x for x in lst if x > 0])"}
+{"task_id": 67, "completion": "def bell_number(n):\n    bell = [[0 for i in range(n+1)] for j in range(n+1)]\n    bell[0][0] = 1\n    for i in range(1, n+1):\n        bell[i][0] = bell[i-1][i-1]\n        for j in range(1, i+1):\n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]\n    return bell[n][0]"}
+{"task_id": 68, "completion": "def is_Monotonic(A):\n    increasing = decreasing = True\n    for i in range(1, len(A)):\n        if A[i] > A[i - 1]:\n            decreasing = False\n        if A[i] < A[i - 1]:\n            increasing = False\n    return increasing or decreasing"}
+{"task_id": 69, "completion": "def is_sublist(l, s):\n    sub_len = len(s)\n    for i in range(len(l) - sub_len + 1):\n        if l[i:i + sub_len] == s:\n            return True\n    return False"}
+{"task_id": 70, "completion": "def get_equal(Input):\n    if not Input:\n        return True\n    length = len(Input[0])\n    for t in Input:\n        if len(t) != length:\n            return False\n    return True"}
+{"task_id": 71, "completion": "import math\n\ndef comb_sort(nums):\n    gap = len(nums)\n    shrink = 1.3\n    sorted = False\n\n    while not sorted:\n        gap = int(gap / shrink)\n        if gap <= 1:\n            gap = 1\n            sorted = True\n\n        for i in range(len(nums) - gap):\n            if nums[i] > nums[i + gap]:\n                nums[i], nums[i + gap] = nums[i + gap], nums[i]\n                sorted = False\n    return nums"}
+{"task_id": 72, "completion": "def dif_Square(n):\n    if n < 0:\n        return False\n    if n % 2 == 0:\n        return True\n    return n % 4 == 1"}
+{"task_id": 74, "completion": "def is_samepatterns(colors, patterns):\n    from collections import defaultdict\n    if len(colors) != len(patterns):\n        return False\n    color_to_pattern = {}\n    pattern_to_color = {}\n    for color, pattern in zip(colors, patterns):\n        if color in color_to_pattern and color_to_pattern[color] != pattern:\n            return False\n        if pattern in pattern_to_color and pattern_to_color[pattern] != color:\n            return False\n        color_to_pattern[color] = pattern\n        pattern_to_color[pattern] = color\n    return True"}
+{"task_id": 75, "completion": "def find_tuples(test_list, K):\n    return [tup for tup in test_list if all(elem % K == 0 for elem in tup)]"}
+{"task_id": 77, "completion": "def is_Diff(n):\n    while n > 0:\n        odd_sum = sum(int(digit) for i, digit in enumerate(str(n)) if i % 2 == 0)\n        even_sum = sum(int(digit) for i, digit in enumerate(str(n)) if i % 2 != 0)\n        n = abs(odd_sum - even_sum)\n    return n == 0"}
+{"task_id": 79, "completion": "def word_len(s):\n    return len(s) % 2 != 0"}
+{"task_id": 80, "completion": "def tetrahedral_number(n):\n    return n * (n + 1) * (n + 2) // 6"}
+{"task_id": 82, "completion": "import math\n\ndef volume_sphere(r):\n    return (4/3) * math.pi * (r ** 3)"}
+{"task_id": 83, "completion": "import string\n\ndef get_Char(strr):\n    total_ascii = sum(ord(char) for char in strr)\n    mod_value = total_ascii % 26\n    return string.ascii_lowercase[mod_value]"}
+{"task_id": 84, "completion": "```python\ndef sequence(n):\n    if n == 1 or n == 2:\n        return 1\n    seq = [0, 1, 1]\n    for i in range(3, n + 1):\n        seq.append(seq[seq[i - 1]] + seq[i - seq[i - 1]])\n    return seq[n]\n```"}
+{"task_id": 85, "completion": "import math\n\ndef surfacearea_sphere(r):\n    return 4 * math.pi * r * r"}
+{"task_id": 86, "completion": "def centered_hexagonal_number(n):\n    return 3 * n * (n - 1) + 1"}
+{"task_id": 87, "completion": "def merge_dictionaries_three(dict1,dict2, dict3):\n    merged_dict = {**dict1, **dict2, **dict3}\n    return merged_dict"}
+{"task_id": 88, "completion": "import collections\n\ndef freq_count(list1):\n    return dict(collections.Counter(list1))"}
+{"task_id": 89, "completion": "def closest_num(N):\n    return N - 1 if N > 0 else None"}
+{"task_id": 90, "completion": "def len_log(list1):\n    if not list1:\n        return 0\n    max_length = 0\n    for word in list1:\n        if len(word) > max_length:\n            max_length = len(word)\n    return max_length"}
+{"task_id": 91, "completion": "import re\n\ndef find_substring(str1, sub_str):\n    return any(re.search(re.escape(sub_str), s) for s in str1)"}
+{"task_id": 92, "completion": "def is_undulating(n):\n    s = str(n)\n    if len(s) < 3:\n        return False\n    first, second = s[0], s[1]\n    if first == second:\n        return False\n    for i in range(2, len(s)):\n        if s[i] != first and s[i] != second:\n            return False\n        if s[i] == s[i-2]:\n            continue\n        else:\n            return False\n    return True"}
+{"task_id": 93, "completion": "import math\n\ndef power(a, b):\n    return math.pow(a, b)"}
+{"task_id": 94, "completion": "def index_minimum(test_list):\n    return min(test_list, key=lambda x: x[1])[0]"}
+{"task_id": 95, "completion": "import math\n\ndef Find_Min_Length(lst):\n    return min(len(sublist) for sublist in lst)"}
+{"task_id": 96, "completion": "def divisor(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count"}
+{"task_id": 97, "completion": "def frequency_lists(list1):\n    flat_list = [item for sublist in list1 for item in sublist]\n    freq = {}\n    for item in flat_list:\n        if item in freq:\n            freq[item] += 1\n        else:\n            freq[item] = 1\n    return freq"}
+{"task_id": 98, "completion": "def multiply_num(numbers):\n    import math\n    product = math.prod(numbers)\n    return product / len(numbers)"}
+{"task_id": 99, "completion": "def decimal_to_binary(n):\n    return bin(n).replace(\"0b\", \"\") if n != 0 else \"0\""}
+{"task_id": 100, "completion": "def next_smallest_palindrome(num):\n    def is_palindrome(n):\n        return str(n) == str(n)[::-1]\n    \n    next_num = num + 1\n    while not is_palindrome(next_num):\n        next_num += 1\n    \n    return next_num"}
+{"task_id": 101, "completion": "def kth_element(arr, k):\n    return arr[k - 1]"}
+{"task_id": 102, "completion": "def snake_to_camel(word):\n    components = word.split('_')\n    return components[0] + ''.join(x.title() for x in components[1:])"}
+{"task_id": 103, "completion": "def eulerian_num(n, m):\n    if m >= n or m < 0:\n        return 0\n    dp = [[0] * (m + 1) for _ in range(n + 1)]\n    dp[0][0] = 1\n    for i in range(1, n + 1):\n        for j in range(0, min(i, m + 1)):\n            dp[i][j] = (i - j) * dp[i - 1][j] + (j + 1) * dp[i - 1][j - 1]\n    return dp[n][m]"}
+{"task_id": 104, "completion": "def sort_sublists(input_list):\n    return [sorted(sublist) for sublist in input_list]"}
+{"task_id": 105, "completion": "def count(lst):\n    return lst.count(True)"}
+{"task_id": 106, "completion": "def add_lists(test_list, test_tup):\n    return tuple(t + (test_list,) for t in test_tup)"}
+{"task_id": 108, "completion": "import heapq\n\ndef merge_sorted_list(num1, num2, num3):\n    return list(heapq.merge(num1, num2, num3))"}
+{"task_id": 109, "completion": "def odd_Equivalent(s,n):\n    count = 0\n    for i in range(n):\n        rotated = s[-i:] + s[:-i]\n        if int(rotated, 2) % 2 != 0:\n            count += 1\n    return count"}
+{"task_id": 111, "completion": "def common_in_nested_lists(nestedlist):\n    if not nestedlist:\n        return []\n    common_elements = set(nestedlist[0])\n    for lst in nestedlist[1:]:\n        common_elements.intersect_update(lst)\n    return list(common_elements)"}
+{"task_id": 113, "completion": "def check_integer(text):\n    try:\n        int(text)\n        return True\n    except ValueError:\n        return False"}
+{"task_id": 115, "completion": "def empty_dit(list1):\n    return all(not d for d in list1)"}
+{"task_id": 116, "completion": "def tuple_to_int(nums):\n    return int(''.join(map(str, nums)))"}
+{"task_id": 117, "completion": "import math\n\ndef list_to_float(test_list):\n    for i in range(len(test_list)):\n        for j in range(len(test_list[i])):\n            try:\n                test_list[i][j] = float(test_list[i][j])\n            except ValueError:\n                continue\n    return test_list"}
+{"task_id": 118, "completion": "def string_to_list(string):\n    return string.split(' ')"}
+{"task_id": 119, "completion": "import math\n\ndef search(arr):\n    low, high = 0, len(arr) - 1\n    while low < high:\n        mid = (low + high) // 2\n        if mid % 2 == 1:\n            mid -= 1\n        if arr[mid] == arr[mid + 1]:\n            low = mid + 2\n        else:\n            high = mid\n    return arr[low]"}
+{"task_id": 120, "completion": "import math\n\ndef max_product_tuple(list1):\n    max_product = -math.inf\n    for a, b in list1:\n        product = abs(a * b)\n        if product > max_product:\n            max_product = product\n    return max_product"}
+{"task_id": 123, "completion": "import math\n\ndef sum_of_divisors(n):\n    total = 1\n    sqrt_n = int(math.sqrt(n))\n    for i in range(2, sqrt_n + 1):\n        if n % i == 0:\n            total += i\n            if i != n // i:\n                total += n // i\n    return total\n\ndef amicable_numbers_sum(limit):\n    amicable_sum = 0\n    for num in range(2, limit):\n        partner = sum_of_divisors(num)\n        if partner != num and partner < limit and sum_of_divisors(partner) == num:\n            amicable_sum += num\n    return amicable_sum"}
+{"task_id": 124, "completion": "import cmath\n\ndef angle_complex(a, b):\n    return cmath.phase(complex(a, b))"}
+{"task_id": 125, "completion": "def find_length(string):\n    max_diff = 0\n    current_diff = 0\n    for char in string:\n        if char == '0':\n            current_diff += 1\n        else:\n            current_diff -= 1\n        if current_diff < 0:\n            current_diff = 0\n        max_diff = max(max_diff, current_diff)\n    return max_diff"}
+{"task_id": 126, "completion": "import math\n\ndef sum(a, b):\n    def gcd(x, y):\n        while y:\n            x, y = y, x % y\n        return x\n\n    def common_divisors_sum(n, m):\n        g = gcd(n, m)\n        total = 0\n        for i in range(1, g + 1):\n            if g % i == 0:\n                total += i\n        return total\n\n    return common_divisors_sum(a, b)"}
+{"task_id": 127, "completion": "def multiply_int(x, y):\n    return x * y"}
+{"task_id": 128, "completion": "def long_words(n, str):\n    return [word for word in str if len(word) > n]"}
+{"task_id": 129, "completion": "import numpy as np\n\ndef magic_square_test(my_matrix):\n    n = len(my_matrix)\n    magic_sum = n * (n ** 2 + 1) // 2\n    check_set = set()\n    \n    for row in my_matrix:\n        if sum(row) != magic_sum:\n            return False\n        check_set.update(row)\n        \n    for col in range(n):\n        if sum(my_matrix[row][col] for row in range(n)) != magic_sum:\n            return False\n        \n    if sum(my_matrix[i][i] for i in range(n)) != magic_sum:\n        return False\n        \n    if sum(my_matrix[i][n - 1 - i] for i in range(n)) != magic_sum:\n        return False\n    \n    if check_set != set(range(1, n ** 2 + 1)):\n        return False\n    \n    return True"}
+{"task_id": 130, "completion": "import collections\n\ndef max_occurrences(nums):\n    counter = collections.Counter(nums)\n    return max(counter, key=counter.get)"}
+{"task_id": 131, "completion": "import re\n\ndef reverse_vowels(str1):\n    vowels = re.findall(r'[aeiouAEIOU]', str1)\n    return re.sub(r'[aeiouAEIOU]', lambda m: vowels.pop(), str1)"}
+{"task_id": 132, "completion": "def tup_string(tup1):\n    return ''.join(map(str, tup1))"}
+{"task_id": 133, "completion": "def sum_negativenum(nums):\n    return sum(num for num in nums if num < 0)"}
+{"task_id": 135, "completion": "def hexagonal_num(n):\n    return n * (2 * n - 1)"}
+{"task_id": 137, "completion": "def zero_count(nums):\n    zeroes = nums.count(0)\n    non_zeroes = len(nums) - zeroes\n    if non_zeroes == 0:\n        return float('inf') if zeroes > 0 else 0\n    return zeroes / non_zeroes"}
+{"task_id": 138, "completion": "def is_Sum_Of_Powers_Of_Two(n):\n    def can_be_expressed(num):\n        while num > 0:\n            if num % 2 == 0:\n                num //= 2\n            else:\n                num -= 1\n                if num == 0:\n                    return True\n        return False\n\n    return can_be_expressed(n)"}
+{"task_id": 139, "completion": "import math\n\ndef circle_circumference(r):\n    return 2 * math.pi * r"}
+{"task_id": 140, "completion": "def extract_singly(test_list):\n    return set(item for sublist in test_list for item in sublist)"}
+{"task_id": 141, "completion": "import math\n\ndef pancake_sort(nums):\n    def flip(sublist, k):\n        start = 0\n        while start < k:\n            sublist[start], sublist[k] = sublist[k], sublist[start]\n            start += 1\n            k -= 1\n\n    n = len(nums)\n    for size in range(n, 1, -1):\n        max_index = nums.index(max(nums[:size]))\n        if max_index + 1 != size:\n            flip(nums, max_index)\n            flip(nums, size - 1)\n    return nums"}
+{"task_id": 142, "completion": "def count_samepair(list1, list2, list3):\n    return sum(1 for a, b, c in zip(list1, list2, list3) if a == b == c)"}
+{"task_id": 143, "completion": "```python\ndef find_lists(Input):\n    return sum(isinstance(item, list) for item in Input)\n```"}
+{"task_id": 145, "completion": "def max_Abs_Diff(arr):\n    if not arr or len(arr) < 2:\n        return 0\n    max_elem = max(arr)\n    min_elem = min(arr)\n    return abs(max_elem - min_elem)"}
+{"task_id": 160, "completion": "def find_solution(a, b, n):\n    def gcd_extended(a, b):\n        if a == 0:\n            return b, 0, 1\n        gcd, x1, y1 = gcd_extended(b % a, a)\n        x = y1 - (b // a) * x1\n        y = x1\n        return gcd, x, y\n    \n    g, x, y = gcd_extended(a, b)\n    if n % g != 0:\n        return None\n    x *= n // g\n    y *= n // g\n    return x, y"}
+{"task_id": 161, "completion": "import math\n\ndef remove_elements(list1, list2):\n    return [item for item in list1 if item not in list2]"}
+{"task_id": 162, "completion": "def sum_series(n):\n    return sum(n - 2 * i for i in range(n // 2 + 1))"}
+{"task_id": 163, "completion": "import math\n\ndef area_polygon(s, l):\n    return (s * l**2) / (4 * math.tan(math.pi / s))"}
+{"task_id": 164, "completion": "import math\n\ndef are_equivalent(num1, num2):\n    def sum_of_divisors(n):\n        total = 1\n        for i in range(2, int(math.sqrt(n)) + 1):\n            if n % i == 0:\n                total += i\n                if i != n // i:\n                    total += n // i\n        return total\n    \n    return sum_of_divisors(num1) == sum_of_divisors(num2)"}
+{"task_id": 165, "completion": "def count_char_position(str1):\n    return sum(1 for idx, char in enumerate(str1.lower()) if ord(char) - 97 == idx)"}
+{"task_id": 166, "completion": "import itertools\n\ndef find_even_pair(A):\n    count = 0\n    for x, y in itertools.combinations(A, 2):\n        if (x ^ y) % 2 == 0:\n            count += 1\n    return count"}
+{"task_id": 167, "completion": "import math\n\ndef next_power_of_2(n):\n    return 1 if n == 0 else 2**math.ceil(math.log2(n))"}
+{"task_id": 168, "completion": "def frequency(a,x):\n    return a.count(x)"}
+{"task_id": 170, "completion": "def sum_range_list(list1, m, n):\n    return sum(list1[m:n+1])"}
+{"task_id": 171, "completion": "def perimeter_pentagon(a):\n    return 5 * a"}
+{"task_id": 172, "completion": "def count_occurance(s):\n    return s.count('std')"}
+{"task_id": 222, "completion": "import collections.abc\ndef check_type(test_tuple):\n    if not isinstance(test_tuple, collections.abc.Iterable):\n        return False\n    first_type = type(test_tuple[0])\n    return all(type(i) == first_type for i in test_tuple)"}
+{"task_id": 223, "completion": "import math\n\ndef binary_search(arr, low, high, x):\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == x:\n            return mid\n        elif arr[mid] < x:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n\ndef is_majority_element(arr, n, x):\n    index = binary_search(arr, 0, n - 1, x)\n    if index == -1:\n        return False\n    if (index + n // 2 < n) and (arr[index + n // 2] == x):\n        return True\n    return False"}
+{"task_id": 224, "completion": "```python\ndef count_Set_Bits(n):\n    return bin(n).count('1')\n```"}
+{"task_id": 226, "completion": "def odd_values_string(s):\n    return ''.join([c for i, c in enumerate(s) if i % 2 == 0])"}
+{"task_id": 227, "completion": "def min_of_three(a, b, c):\n    return min(a, b, c)"}
+{"task_id": 228, "completion": "def all_Bits_Set_In_The_Given_Range(n,l,r):\n    mask = (1 << (r - l + 1)) - 1\n    mask <<= l\n    return (n & mask) == 0"}
+{"task_id": 229, "completion": "def re_arrange_array(arr, n):\n    neg_list = [x for x in arr[:n] if x < 0]\n    pos_list = [x for x in arr[:n] if x >= 0]\n    return neg_list + pos_list + arr[n:]"}
+{"task_id": 230, "completion": "def replace_blank(str1, char):\n    return str1.replace(' ', char)"}
+{"task_id": 232, "completion": "import heapq\n\ndef larg_nnum(list1, n):\n    return heapq.nlargest(n, list1)"}
+{"task_id": 233, "completion": "def lateralsuface_cylinder(r, h):\n    import math\n    return 2 * math.pi * r * h"}
+{"task_id": 234, "completion": "def volume_cube(l):\n    return l ** 3"}
+{"task_id": 235, "completion": "def even_bit_set_number(n):\n    bit_length = n.bit_length() + 1\n    mask = sum(1 << i for i in range(0, bit_length, 2))\n    return n | mask"}
+{"task_id": 237, "completion": "def check_occurences(test_list):\n    occurences = {}\n    for item in test_list:\n        if item in occurences:\n            occurences[item] += 1\n        else:\n            occurences[item] = 1\n    return occurences"}
+{"task_id": 238, "completion": "def number_of_substrings(str):\n    return len(str) * (len(str) + 1) // 2"}
+{"task_id": 239, "completion": "def get_total_number_of_sequences(m,n):\n    def count_sequences(prev, length):\n        if length == 0:\n            return 1\n        total = 0\n        for i in range(prev*2, m+1):\n            total += count_sequences(i, length-1)\n        return total\n\n    total_sequences = 0\n    for i in range(1, m+1):\n        total_sequences += count_sequences(i, n-1)\n        \n    return total_sequences"}
+{"task_id": 240, "completion": "def replace_list(list1, list2):\n    list1[-1:] = list2\n"}
+{"task_id": 242, "completion": "def count_charac(str1):\n    return len(str1)"}
+{"task_id": 244, "completion": "def next_Perfect_Square(N):\n    import math\n    root = math.ceil(math.sqrt(N))\n    return root ** 2"}
+{"task_id": 245, "completion": "import math\n\ndef max_sum(arr):\n    n = len(arr)\n    inc = [0] * n\n    dec = [0] * n\n\n    for i in range(n):\n        inc[i] = arr[i]\n\n    for i in range(1, n):\n        for j in range(0, i):\n            if arr[i] > arr[j] and inc[i] < inc[j] + arr[i]:\n                inc[i] = inc[j] + arr[i]\n\n    for i in range(n):\n        dec[i] = arr[i]\n\n    for i in range(n-2, -1, -1):\n        for j in range(n-1, i, -1):\n            if arr[i] > arr[j] and dec[i] < dec[j] + arr[i]:\n                dec[i] = dec[j] + arr[i]\n\n    max_sum = -math.inf\n    for i in range(n):\n        max_sum = max(max_sum, inc[i] + dec[i] - arr[i])\n\n    return max_sum"}
+{"task_id": 246, "completion": "import math\n\ndef babylonian_squareroot(number):\n    if number < 0:\n        raise ValueError(\"Cannot compute the square root of a negative number.\")\n    if number == 0:\n        return 0\n    guess = number / 2.0\n    tolerance = 1e-10\n    while True:\n        new_guess = (guess + number / guess) / 2.0\n        if abs(new_guess - guess) < tolerance:\n            return new_guess\n        guess = new_guess"}
+{"task_id": 247, "completion": "import numpy as np\n\ndef lps(st): \n    n = len(st)\n    dp = np.zeros((n, n))\n    for i in range(n):\n        dp[i][i] = 1\n    for cl in range(2, n + 1):\n        for i in range(n - cl + 1):\n            j = i + cl - 1\n            if st[i] == st[j] and cl == 2:\n                dp[i][j] = 2\n            elif st[i] == st[j]:\n                dp[i][j] = dp[i + 1][j - 1] + 2\n            else:\n                dp[i][j] = max(dp[i][j - 1], dp[i + 1][j])\n    return int(dp[0][n - 1])"}
+{"task_id": 248, "completion": "def harmonic_sum(n):\n    return sum(1 / i for i in range(1, n))"}
+{"task_id": 249, "completion": "import numpy as np  \n\ndef intersection_array(array_nums1, array_nums2):\n    return np.intersect1d(array_nums1, array_nums2).tolist()"}
+{"task_id": 250, "completion": "def count_X(tup, x):\n    return tup.count(x)"}
+{"task_id": 251, "completion": "def insert_element(lst, element):\n    new_list = []\n    for item in lst:\n        new_list.append(element)\n        new_list.append(item)\n    return new_list"}
+{"task_id": 252, "completion": "import cmath\n\ndef convert(numbers):\n    return [(cmath.polar(complex(num))) for num in numbers]"}
+{"task_id": 253, "completion": "def count_integer(list1):\n    count = 0\n    for element in list1:\n        if isinstance(element, int):\n            count += 1\n    return count"}
+{"task_id": 255, "completion": "from itertools import combinations_with_replacement\n\ndef combinations_colors(l, n):\n    return list(combinations_with_replacement(l, n))"}
+{"task_id": 256, "completion": "import math\n\ndef count_Primes_nums(n):\n    if n < 2:\n        return 0\n    sieve = [True] * n\n    sieve[0] = sieve[1] = False\n    for i in range(2, int(math.sqrt(n)) + 1):\n        if sieve[i]:\n            for j in range(i * i, n, i):\n                sieve[j] = False\n    return sum(sieve)"}
+{"task_id": 257, "completion": "def swap_numbers(a, b):\n    return (b, a)"}
+{"task_id": 259, "completion": "def maximize_elements(test_tup1, test_tup2):\n    return tuple(max(a, b) for a, b in zip(test_tup1, test_tup2))"}
+{"task_id": 260, "completion": "import math\n\ndef newman_prime(n):\n    def nsw_prime(num):\n        if num == 0 or num == 1:\n            return 1\n        a, b = 1, 1\n        for _ in range(2, num + 1):\n            a, b = b, 2 * b + a\n        return b\n    \n    primes = [2]\n    candidate = 3\n    \n    while len(primes) <= n:\n        if all(candidate % p != 0 for p in primes if p <= math.isqrt(candidate)):\n            primes.append(candidate)\n        candidate += 2\n    \n    def is_nsw_prime(number):\n        idx = 0\n        current = nsw_prime(idx)\n        while current < number:\n            idx += 1\n            current = nsw_prime(idx)\n        return current == number\n    \n    count = 0\n    for prime in primes:\n        if is_nsw_prime(prime):\n            count += 1\n            if count == n:\n                return prime"}
+{"task_id": 261, "completion": "def division_elements(test_tup1, test_tup2):\n    return tuple(a / b for a, b in zip(test_tup1, test_tup2))"}
+{"task_id": 262, "completion": "def split_two_parts(list1, L):\n    return list1[:L], list1[L:]"}
+{"task_id": 264, "completion": "def dog_age(h_age):\n    if h_age <= 0:\n        return 0\n    elif h_age == 1:\n        return 15\n    elif h_age == 2:\n        return 15 + 9\n    else:\n        return 24 + (h_age - 2) * 5"}
+{"task_id": 265, "completion": "def list_split(S, step):\n    return [S[i:i + step] for i in range(0, len(S), step)]"}
+{"task_id": 266, "completion": "def lateralsurface_cube(l):\n    return 4 * l * l"}
+{"task_id": 267, "completion": "def square_Sum(n):\n    return sum([(2*i + 1)**2 for i in range(n)])"}
+{"task_id": 268, "completion": "def find_star_num(n):\n    return 6 * n * (n - 1) // 2 + 1"}
+{"task_id": 269, "completion": "def ascii_value(k):\n    return ord(k)"}
+{"task_id": 270, "completion": "def sum_even_and_even_index(arr):\n    return sum(arr[i] for i in range(0, len(arr), 2) if arr[i] % 2 == 0)"}
+{"task_id": 271, "completion": "import math\ndef even_Power_Sum(n):\n    return sum((2 * i) ** 5 for i in range(1, n + 1))"}
+{"task_id": 272, "completion": "def rear_extract(test_list):\n    return [elem[-1] for elem in test_list]"}
+{"task_id": 273, "completion": "def subtract_elements(test_tup1, test_tup2):\n    return tuple(a - b for a, b in zip(test_tup1, test_tup2))"}
+{"task_id": 274, "completion": "import math\n\ndef even_binomial_Coeff_Sum(n):\n    result = 0\n    for k in range(0, n + 1, 2):\n        result += math.comb(n, k)\n    return result"}
+{"task_id": 276, "completion": "```python\nimport math\n\ndef volume_cylinder(r, h):\n    return math.pi * r**2 * h\n```"}
+{"task_id": 277, "completion": "def dict_filter(dict,n):\n    return {k: v for k, v in dict.items() if v >= n}"}
+{"task_id": 278, "completion": "def count_first_elements(test_tup):\n    if not test_tup or not isinstance(test_tup[0], tuple):\n        return 0\n    first_tuple_elem = test_tup[0][0]\n    return next((i for i, x in enumerate(test_tup) if x == first_tuple_elem), len(test_tup))"}
+{"task_id": 279, "completion": "import math\n\ndef is_num_decagonal(n):\n    if n < 1:\n        return False\n    x = (math.sqrt(8 * n + 1) + 1) / 4\n    return x.is_integer()\n\ndef nth_decagonal_number(n):\n    if n < 1:\n        return None\n    return n * (4 * n - 3)\n"}
+{"task_id": 280, "completion": "def sequential_search(dlist, item):\n    found = False\n    pos = -1\n    for i in range(len(dlist)):\n        if dlist[i] == item:\n            found = True\n            pos = i\n            break\n    return (found, pos)"}
+{"task_id": 281, "completion": "def all_unique(test_list):\n    return len(test_list) == len(set(test_list))"}
+{"task_id": 282, "completion": "import itertools\n\ndef sub_list(nums1, nums2):\n    return [a - b for a, b in itertools.zip_longest(nums1, nums2, fillvalue=0)]"}
+{"task_id": 283, "completion": "def validate(n):\n    from collections import Counter\n    digits = Counter(str(n))\n    for digit, count in digits.items():\n        if count > int(digit):\n            return False\n    return True"}
+{"task_id": 284, "completion": "def check_element(lst, element):\n    return all(x == element for x in lst)"}
+{"task_id": 285, "completion": "import re\n\ndef text_match_two_three(text):\n    pattern = 'ab{2,3}'\n    return bool(re.search(pattern, text))"}
+{"task_id": 286, "completion": "import sys\n\ndef max_sub_array_sum_repeated(a, n, k):\n    def max_sub_array_sum(arr):\n        max_ending_here = max_so_far = -sys.maxsize\n        for x in arr:\n            max_ending_here = max(x, max_ending_here + x)\n            max_so_far = max(max_so_far, max_ending_here)\n        return max_so_far\n\n    max_in_once = max_sub_array_sum(a)\n    if k == 1:\n        return max_in_once\n\n    max_prefix_sum = prefix_sum = 0\n    for x in a:\n        prefix_sum += x\n        max_prefix_sum = max(max_prefix_sum, prefix_sum)\n\n    max_suffix_sum = suffix_sum = 0\n    for x in reversed(a):\n        suffix_sum += x\n        max_suffix_sum = max(max_suffix_sum, suffix_sum)\n\n    total_sum = sum(a)\n\n    if total_sum > 0:\n        return max(max_in_once, max_prefix_sum + max_suffix_sum + (k - 2) * total_sum)\n    else:\n        return max(max_in_once, max_prefix_sum + max_suffix_sum)"}
+{"task_id": 287, "completion": "def square_Sum(n):\n    return sum((2 * i) ** 2 for i in range(1, n + 1))"}
+{"task_id": 290, "completion": "import math\n\ndef max_length(list1):\n    return max(list1, key=len)"}
+{"task_id": 291, "completion": "def count_no_of_ways(n, k):\n    if n == 0:\n        return 0\n    if n == 1:\n        return k\n    same = k\n    diff = k * (k - 1)\n    total = same + diff\n    for i in range(3, n + 1):\n        same = diff\n        diff = total * (k - 1)\n        total = same + diff\n    return total"}
+{"task_id": 292, "completion": "def find(n,m):\n    import math\n    return n // m"}
+{"task_id": 293, "completion": "import math\n\ndef otherside_rightangle(w, h):\n    return math.sqrt(w**2 + h**2) if w != 0 and h != 0 else max(w, h)"}
+{"task_id": 294, "completion": "import math\n\ndef max_val(listval):\n    max_value = -math.inf\n    for item in listval:\n        if isinstance(item, (int, float)) and item > max_value:\n            max_value = item\n    return max_value"}
+{"task_id": 295, "completion": "import math\ndef sum_div(number):\n    sum_of_divisors = 0\n    for i in range(1, int(math.sqrt(number)) + 1):\n        if number % i == 0:\n            sum_of_divisors += i\n            if i != number // i and i != 1:\n                sum_of_divisors += number // i\n    return sum_of_divisors"}
+{"task_id": 296, "completion": "import math\n\ndef get_Inv_Count(arr):\n    return merge_sort(arr, 0, len(arr) - 1)\n\ndef merge_sort(arr, temp_arr, left, right):\n    inv_count = 0\n    if left < right:\n        mid = (left + right) // 2\n        inv_count += merge_sort(arr, left, mid)\n        inv_count += merge_sort(arr, mid + 1, right)\n        inv_count += merge(arr, left, mid, right)\n    return inv_count\n\ndef merge(arr, left, mid, right):\n    temp_arr = [0]*(right - left + 1)\n    i = left\n    j = mid + 1\n    k = 0\n    inv_count = 0\n    \n    while i <= mid and j <= right:\n        if arr[i] <= arr[j]:\n            temp_arr[k] = arr[i]\n            i += 1\n        else:\n            temp_arr[k] = arr[j]\n            inv_count += (mid - i + 1)\n            j += 1\n        k += 1\n\n    while i <= mid:\n        temp_arr[k] = arr[i]\n        i += 1\n        k += 1\n\n    while j <= right:\n        temp_arr[k] = arr[j]\n        j += 1\n        k += 1\n\n    for i in range(left, right + 1):\n        arr[i] = temp_arr[i - left]\n\n    return inv_count"}
+{"task_id": 297, "completion": "import collections\n\ndef flatten_list(list1):\n    flat_list = []\n    for item in list1:\n        if isinstance(item, collections.abc.Iterable) and not isinstance(item, (str, bytes)):\n            flat_list.extend(flatten_list(item))\n        else:\n            flat_list.append(item)\n    return flat_list"}
+{"task_id": 299, "completion": "def max_aggregate(stdata):\n    max_sum = float('-inf')\n    max_tuple = ()\n    for tup in stdata:\n        current_sum = sum(tup)\n        if current_sum > max_sum:\n            max_sum = current_sum\n            max_tuple = tup\n    return max_tuple"}
+{"task_id": 300, "completion": "import math\n\ndef count_binary_seq(n):\n    def combination(n, k):\n        return math.comb(n, k)\n    \n    total_count = 0\n    for i in range(n + 1):\n        total_count += combination(n, i) ** 2\n    \n    return total_count"}
+{"task_id": 301, "completion": "import collections\n\ndef dict_depth(d):\n    if not isinstance(d, dict) or not d:\n        return 0\n    return max(dict_depth(v) if isinstance(v, dict) else 0 for v in d.values()) + 1"}
+{"task_id": 304, "completion": "def find_Element(arr, ranges, rotations, index):\n    for i in range(rotations):\n        start, end = ranges[i]\n        arr = arr[:start] + arr[start:end+1][::-1] + arr[end+1:]\n    return arr[index]"}
+{"task_id": 305, "completion": "import itertools\n\ndef start_withp(words):\n    return list(itertools.islice((word for word in words if word.startswith('p')), 2))"}
+{"task_id": 306, "completion": "import sys\n\ndef max_sum_increasing_subseq(a, n, index, k):\n    dp = [-sys.maxsize] * n\n    dp[k] = a[k]\n    max_sum = -sys.maxsize\n\n    for i in range(index+1):\n        if i == 0:\n            dp[i] = a[i]\n        else:\n            for j in range(i):\n                if a[i] > a[j] and dp[i] < dp[j] + a[i]:\n                    dp[i] = dp[j] + a[i]\n        if i < k:\n            max_sum = max(max_sum, dp[i])\n\n    return max_sum + a[k]\n"}
+{"task_id": 307, "completion": "def colon_tuplex(tuplex, m, n):\n    return tuple(row[m:n] for row in tuplex)"}
+{"task_id": 308, "completion": "import heapq\n\ndef large_product(nums1, nums2, N):\n    max_heap = []\n    for num1 in nums1:\n        for num2 in nums2:\n            product = num1 * num2\n            if len(max_heap) < N:\n                heapq.heappush(max_heap, product)\n            else:\n                heapq.heappushpop(max_heap, product)\n    return sorted(max_heap, reverse=True)"}
+{"task_id": 309, "completion": "def maximum(a, b):\n    if a > b:\n        return a\n    else:\n        return b"}
+{"task_id": 310, "completion": "def string_to_tuple(str1):\n    return tuple(str1)"}
+{"task_id": 311, "completion": "def set_left_most_unset_bit(n):\n    if n == 0:\n        return 1\n    bit_to_set = 1\n    while n & bit_to_set:\n        bit_to_set <<= 1\n    return n | bit_to_set"}
+{"task_id": 312, "completion": "import math\n\ndef volume_cone(r, h):\n    return (1/3) * math.pi * r**2 * h"}
+{"task_id": 388, "completion": "def highest_Power_of_2(n):\n    import math\n    if n < 1:\n        return 0\n    p = int(math.log2(n))\n    return 2 ** p"}
+{"task_id": 389, "completion": "import math\n\ndef find_lucas(n):\n    if n == 0:\n        return 2\n    elif n == 1:\n        return 1\n    else:\n        a, b = 2, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return b"}
+{"task_id": 390, "completion": "def add_string(list_, string):\n    return [string.format(item) for item in list_]"}
+{"task_id": 391, "completion": "def convert_list_dictionary(l1, l2, l3):\n    nested_dict = {}\n    for key1, key2, key3 in zip(l1, l2, l3):\n        if key1 not in nested_dict:\n            nested_dict[key1] = {}\n        if key2 not in nested_dict[key1]:\n            nested_dict[key1][key2] = {}\n        nested_dict[key1][key2] = key3\n    return nested_dict"}
+{"task_id": 392, "completion": "import functools\n\n@functools.lru_cache(None)\ndef get_max_sum(n):\n    if n == 0:\n        return 0\n    return max((get_max_sum(n // 2) + get_max_sum(n // 3) + get_max_sum(n // 4) + get_max_sum(n // 5)), n)"}
+{"task_id": 393, "completion": "def max_length_list(input_list):\n    if not input_list:\n        return None\n    max_list = input_list[0]\n    for sublist in input_list:\n        if len(sublist) > len(max_list):\n            max_list = sublist\n    return max_list"}
+{"task_id": 394, "completion": "def check_distinct(test_tup):\n    return len(test_tup) == len(set(test_tup))"}
+{"task_id": 395, "completion": "def first_non_repeating_character(str1):\n    char_count = {}\n    for char in str1:\n        char_count[char] = char_count.get(char, 0) + 1\n    for char in str1:\n        if char_count[char] == 1:\n            return char\n    return None"}
+{"task_id": 396, "completion": "def check_char(string):\n    return string[0] == string[-1] if string else False"}
+{"task_id": 397, "completion": "def median_numbers(a, b, c):\n    numbers = [a, b, c]\n    numbers.sort()\n    return numbers[1]"}
+{"task_id": 398, "completion": "def sum_of_digits(nums):\n    def digit_sum(n):\n        return sum(int(digit) for digit in str(n))\n    return [digit_sum(num) for num in nums]"}
+{"task_id": 399, "completion": "def bitwise_xor(test_tup1, test_tup2):\n    return tuple(a ^ b for a, b in zip(test_tup1, test_tup2))"}
+{"task_id": 400, "completion": "import collections\ndef extract_freq(test_list):\n    counter = collections.Counter(test_list)\n    return len(counter)"}
+{"task_id": 401, "completion": "def add_nested_tuples(test_tup1, test_tup2):\n    return tuple(tuple(a + b for a, b in zip(t1, t2)) for t1, t2 in zip(test_tup1, test_tup2))"}
+{"task_id": 404, "completion": "def minimum(a, b):\n    return a if a < b else b"}
+{"task_id": 405, "completion": "def check_tuplex(tuplex, tuple1):\n    return tuplex in tuple1"}
+{"task_id": 406, "completion": "def find_Parity(x):\n    return x % 2 != 0"}
+{"task_id": 407, "completion": "def rearrange_bigger(n):\n    digits = list(str(n))\n    length = len(digits)\n\n    for i in range(length - 2, -1, -1):\n        if digits[i] < digits[i + 1]:\n            break\n    else:\n        return -1\n\n    for j in range(length - 1, i, -1):\n        if digits[j] > digits[i]:\n            digits[i], digits[j] = digits[j], digits[i]\n            break\n\n    digits = digits[:i + 1] + sorted(digits[i + 1:])\n    return int(''.join(digits))"}
+{"task_id": 408, "completion": "import heapq\n\ndef push(i, j):\n    if i < len(nums1) and j < len(nums2):\n        heapq.heappush(heap, (nums1[i] + nums2[j], i, j))\n\ndef k_smallest_pairs(num1, nums2, k):\n    global heap, nums1, nums2\n    heap, nums1, nums2 = [], num1, nums2\n    push(0, 0)\n    pairs = []\n    \n    while len(pairs) < k and heap:\n        _, i, j = heapq.heappop(heap)\n        pairs.append((nums1[i], nums2[j]))\n        push(i, j + 1)\n        if j == 0:\n            push(i + 1, 0)\n    \n    return pairs"}
+{"task_id": 409, "completion": "def min_product_tuple(list1):\n    return min(a * b for a, b in list1)"}
+{"task_id": 410, "completion": "def min_val(listval):\n    return min(x for x in listval if isinstance(x, (int, float)))"}
+{"task_id": 411, "completion": "def snake_to_camel(word):\n    parts = word.split('_')\n    return parts[0] + ''.join(part.capitalize() for part in parts[1:])"}
+{"task_id": 412, "completion": "def remove_odd(l):\n    return [x for x in l if x % 2 == 0]"}
+{"task_id": 413, "completion": "def extract_nth_element(list1, n):\n    return [t[n] for t in list1 if len(t) > n]"}
+{"task_id": 414, "completion": "def overlapping(list1, list2):\n    return any(item in list2 for item in list1)"}
+{"task_id": 415, "completion": "import math\n\ndef max_Product(arr):\n    if len(arr) < 2:\n        return None\n    \n    arr.sort()\n    \n    product1 = arr[0] * arr[1]\n    product2 = arr[-1] * arr[-2]\n    \n    if product1 > product2:\n        return (arr[0], arr[1])\n    else:\n        return (arr[-1], arr[-2])"}
+{"task_id": 417, "completion": "import collections\ndef group_tuples(Input):\n    result = collections.defaultdict(list)\n    for item in Input:\n        result[item[0]].append(item)\n    return dict(result)"}
+{"task_id": 418, "completion": "def Find_Max(lst):\n    return max(lst, key=len)"}
+{"task_id": 419, "completion": "import math\n\ndef round_and_sum(list1):\n    rounded_list = [round(num) for num in list1]\n    total_sum = sum(rounded_list)\n    result = total_sum * len(list1)\n    print(result)"}
+{"task_id": 420, "completion": "def cube_Sum(n):\n    sum = 0\n    for i in range(1, n+1):\n        even_number = 2 * i\n        sum += even_number ** 3\n    return sum"}
+{"task_id": 421, "completion": "import itertools\n\ndef concatenate_tuple(test_tup, delim):\n    return list(itertools.starmap(lambda x, y: x + delim + y, test_tup))"}
+{"task_id": 422, "completion": "def find_Average_Of_Cube(n):\n    return sum(i**3 for i in range(1, n+1)) / n"}
+{"task_id": 424, "completion": "def extract_rear(test_tuple):\n    return tuple(s[-1] for s in test_tuple if s)"}
+{"task_id": 425, "completion": "def count_element_in_list(list1, x):\n    return sum(1 for sublist in list1 if x in sublist)"}
+{"task_id": 426, "completion": "def filter_oddnumbers(nums):\n    return [num for num in nums if num % 2 == 1]"}
+{"task_id": 427, "completion": "def change_date_format(dt):\n    return '-'.join(reversed(dt.split('-')))"}
+{"task_id": 428, "completion": "def shell_sort(my_list):\n    gap = len(my_list) // 2\n    while gap > 0:\n        for i in range(gap, len(my_list)):\n            temp = my_list[i]\n            j = i\n            while j >= gap and my_list[j - gap] > temp:\n                my_list[j] = my_list[j - gap]\n                j -= gap\n            my_list[j] = temp\n        gap //= 2\n    return my_list"}
+{"task_id": 429, "completion": "import itertools\n\ndef and_tuples(test_tup1, test_tup2):\n    return list(map(lambda x: (x, test_tup2[test_tup1.index(x)]), test_tup1))"}
+{"task_id": 430, "completion": "import math\n\ndef parabola_directrix(a, b, c):\n    return (4 * a * c - b ** 2 + 1) / (4 * a)"}
+{"task_id": 431, "completion": "def common_element(list1, list2):\n    return any(elem in list2 for elem in list1)"}
+{"task_id": 432, "completion": "def median_trapezium(base1, base2, height):\n    return (base1 + base2) / 2"}
+{"task_id": 433, "completion": "def check_greater(arr, number):\n    return all(number > elem for elem in arr)"}
+{"task_id": 434, "completion": "import re\n\ndef text_match_one(text):\n    pattern = r'ab+'\n    return bool(re.match(pattern, text))"}
+{"task_id": 435, "completion": "def last_Digit(n):\n    return abs(n) % 10"}
+{"task_id": 436, "completion": "def neg_nos(list1):\n    return [num for num in list1 if num < 0]"}
+{"task_id": 437, "completion": "def remove_odd(str1):\n    return str1[::2]"}
+{"task_id": 438, "completion": "def count_bidirectional(test_list):\n    pair_dict = {}\n    count = 0\n    \n    for a, b in test_list:\n        if (a, b) in pair_dict:\n            pair_dict[(a, b)] += 1\n        elif (b, a) in pair_dict:\n            pair_dict[(b, a)] += 1\n        else:\n            pair_dict[(a, b)] = 1\n    \n    for (a, b), freq in pair_dict.items():\n        if (b, a) in pair_dict and (a, b) != (b, a):\n            count += min(pair_dict[(a, b)], pair_dict[(b, a)])\n    \n    return count"}
+{"task_id": 439, "completion": "def multiple_to_single(L):\n    return int(''.join(map(str, L)))"}
+{"task_id": 440, "completion": "def find_adverb_position(text):\n    import re\n    adverb_pattern = re.compile(r'\\b\\w+ly\\b', re.IGNORECASE)\n    match = adverb_pattern.search(text)\n    if match:\n        return match.group(0), match.start(), match.end()\n    else:\n        return None"}
+{"task_id": 441, "completion": "def surfacearea_cube(l):\n    return 6 * l ** 2"}
+{"task_id": 442, "completion": "import numpy as np\n\ndef positive_count(nums):\n    positive_numbers = np.sum(np.array(nums) > 0)\n    return positive_numbers / len(nums) if nums else 0"}
+{"task_id": 443, "completion": "def largest_neg(list1):\n    max_neg = float('-inf')\n    for num in list1:\n        if num < 0 and num > max_neg:\n            max_neg = num\n    return max_neg if max_neg != float('-inf') else None"}
+{"task_id": 444, "completion": "def trim_tuple(test_list, K):\n    return [tpl[K:-K] if K < len(tpl) else () for tpl in test_list]"}
+{"task_id": 445, "completion": "def index_multiplication(test_tup1, test_tup2):\n    return tuple(a * b for a, b in zip(test_tup1, test_tup2))"}
+{"task_id": 446, "completion": "import collections\n\ndef count_Occurrence(tup, lst):\n    tup_counts = collections.Counter(tup)\n    return [tup_counts[item] for item in lst]"}
+{"task_id": 447, "completion": "def cube_nums(nums):\n    return [x**3 for x in nums]"}
+{"task_id": 448, "completion": "import functools\n\ndef cal_sum(n):\n    @functools.lru_cache(None)\n    def perrin(k):\n        if k == 0:\n            return 3\n        elif k == 1:\n            return 0\n        elif k == 2:\n            return 2\n        else:\n            return perrin(k-2) + perrin(k-3)\n    \n    return sum(perrin(i) for i in range(n + 1))"}
+{"task_id": 450, "completion": "def extract_string(str_list, l):\n    return [s[:l] for s in str_list]"}
+{"task_id": 451, "completion": "def remove_whitespaces(text1):\n    return ''.join(text1.split())"}
+{"task_id": 452, "completion": "def loss_amount(actual_cost, sale_amount):\n    return max(0, actual_cost - sale_amount)"}
+{"task_id": 453, "completion": "import math\n\ndef sumofFactors(n):\n    sum = 0\n    for i in range(1, int(math.sqrt(n)) + 1):\n        if n % i == 0:\n            if i % 2 == 0:\n                sum += i\n            if i != n // i and (n // i) % 2 == 0:\n                sum += n // i\n    return sum"}
+{"task_id": 454, "completion": "import re\n\ndef text_match_wordz(text):\n    pattern = r'\\b\\w*z\\w*\\b'\n    return re.findall(pattern, text)"}
+{"task_id": 455, "completion": "def check_monthnumb_number(monthnum2):\n    return monthnum2 in [1, 3, 5, 7, 8, 10, 12]"}
+{"task_id": 456, "completion": "def reverse_string_list(stringlist):\n    return [s[::-1] for s in stringlist]"}
+{"task_id": 457, "completion": "def Find_Min(lst):\n    min_length = float('inf')\n    min_sublist = []\n    for sublist in lst:\n        if len(sublist) < min_length:\n            min_length = len(sublist)\n            min_sublist = sublist\n    return min_sublist"}
+{"task_id": 458, "completion": "def rectangle_area(l, b):\n    return l * b"}
+{"task_id": 459, "completion": "def remove_uppercase(str1):\n    result = []\n    temp = []\n    in_uppercase = False\n\n    for char in str1:\n        if char.isupper():\n            in_uppercase = True\n        else:\n            if in_uppercase and temp:\n                temp = []\n            in_uppercase = False\n            result.append(char)\n    \n    return ''.join(result)"}
+{"task_id": 460, "completion": "def Extract(lst):\n    return [item[0] for item in lst if item]"}
+{"task_id": 461, "completion": "def upper_ctr(s):\n    return sum(1 for c in s if c.isupper())"}
+{"task_id": 462, "completion": "import itertools\n\ndef combinations_list(list1):\n    return [list(combo) for r in range(len(list1) + 1) for combo in itertools.combinations(list1, r)]"}
+{"task_id": 463, "completion": "import math\n\ndef max_subarray_product(arr):\n    if not arr:\n        return 0\n    \n    max_prod = float('-inf')\n    min_temp, max_temp = 1, 1\n    \n    for num in arr:\n        if num == 0:\n            min_temp, max_temp = 1, 1\n            max_prod = max(max_prod, 0)\n            continue\n            \n        temp = max_temp * num\n        max_temp = max(num * min_temp, temp, num)\n        min_temp = min(temp, num * min_temp, num)\n        \n        max_prod = max(max_prod, max_temp)\n    \n    return max_prod"}
+{"task_id": 464, "completion": "import collections\n\ndef check_value(d, n):\n    return len(set(d.values())) == n"}
+{"task_id": 465, "completion": "def drop_empty(dict1):\n    return {k: v for k, v in dict1.items() if v}"}
+{"task_id": 468, "completion": "def max_product(arr):\n    n = len(arr)\n    if n == 0:\n        return 0\n\n    max_prod = [0] * n\n    max_result = 0\n\n    for i in range(n):\n        max_prod[i] = arr[i]\n        for j in range(i):\n            if arr[i] > arr[j]:\n                max_prod[i] = max(max_prod[i], max_prod[j] * arr[i])\n        max_result = max(max_result, max_prod[i])\n\n    return max_result"}
+{"task_id": 470, "completion": "import itertools\n\ndef add_pairwise(test_tup):\n    return tuple(sum(pair) for pair in itertools.pairwise(test_tup))"}
+{"task_id": 471, "completion": "def find_remainder(arr, n):\n    result = 1\n    for num in arr:\n        result = (result * num) % n\n    return result"}
+{"task_id": 472, "completion": "import itertools\n\ndef check_Consecutive(l):\n    for a, b in itertools.pairwise(sorted(l)):\n        if b - a != 1:\n            return False\n    return True"}
+{"task_id": 473, "completion": "def tuple_intersection(test_list1, test_list2):\n    set1 = {tuple(sorted(t)) for t in test_list1}\n    set2 = {tuple(sorted(t)) for t in test_list2}\n    intersection = set1.intersection(set2)\n    return list(intersection)"}
+{"task_id": 474, "completion": "def replace_char(str1,ch,newch):\n    return str1.replace(ch, newch)"}
+{"task_id": 475, "completion": "def sort_counter(dict1):\n    return dict(sorted(dict1.items(), key=lambda item: item[1]))"}
+{"task_id": 476, "completion": "def big_sum(nums):\n    if len(nums) == 0:\n        return 0\n    return max(nums) + min(nums)"}
+{"task_id": 477, "completion": "def is_lower(string):\n    return string.lower()"}
+{"task_id": 478, "completion": "def remove_lowercase(str1):\n    result = []\n    i = 0\n    while i < len(str1):\n        if str1[i].islower():\n            while i < len(str1) and str1[i].islower():\n                i += 1\n        else:\n            result.append(str1[i])\n            i += 1\n    return ''.join(result)"}
+{"task_id": 479, "completion": "def first_Digit(n):\n    while n >= 10:\n        n //= 10\n    return n"}

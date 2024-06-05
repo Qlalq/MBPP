@@ -1,0 +1,1 @@
+Importing function libraries(like: import math) and output function code only,without main function and code blocks(like ```python) and any explanation at the outset so that I can call your generated functions directly\n

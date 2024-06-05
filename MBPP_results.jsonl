@@ -1,0 +1,257 @@
+{"task_id": 11, "passed": true, "error_message": ""}
+{"task_id": 12, "passed": true, "error_message": ""}
+{"task_id": 14, "passed": true, "error_message": ""}
+{"task_id": 16, "passed": true, "error_message": ""}
+{"task_id": 17, "passed": true, "error_message": ""}
+{"task_id": 18, "passed": true, "error_message": ""}
+{"task_id": 19, "passed": true, "error_message": ""}
+{"task_id": 20, "passed": true, "error_message": ""}
+{"task_id": 56, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 57, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 58, "passed": true, "error_message": ""}
+{"task_id": 59, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 61, "passed": true, "error_message": ""}
+{"task_id": 62, "passed": true, "error_message": ""}
+{"task_id": 63, "passed": true, "error_message": ""}
+{"task_id": 64, "passed": true, "error_message": ""}
+{"task_id": 65, "passed": true, "error_message": ""}
+{"task_id": 66, "passed": true, "error_message": ""}
+{"task_id": 67, "passed": true, "error_message": ""}
+{"task_id": 68, "passed": true, "error_message": ""}
+{"task_id": 69, "passed": true, "error_message": ""}
+{"task_id": 70, "passed": true, "error_message": ""}
+{"task_id": 71, "passed": true, "error_message": ""}
+{"task_id": 72, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 74, "passed": true, "error_message": ""}
+{"task_id": 75, "passed": true, "error_message": ""}
+{"task_id": 77, "passed": true, "error_message": ""}
+{"task_id": 79, "passed": true, "error_message": ""}
+{"task_id": 80, "passed": true, "error_message": ""}
+{"task_id": 82, "passed": true, "error_message": ""}
+{"task_id": 83, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 84, "passed": true, "error_message": ""}
+{"task_id": 85, "passed": true, "error_message": ""}
+{"task_id": 86, "passed": true, "error_message": ""}
+{"task_id": 87, "passed": true, "error_message": ""}
+{"task_id": 88, "passed": true, "error_message": ""}
+{"task_id": 89, "passed": true, "error_message": ""}
+{"task_id": 90, "passed": true, "error_message": ""}
+{"task_id": 91, "passed": true, "error_message": ""}
+{"task_id": 92, "passed": true, "error_message": ""}
+{"task_id": 93, "passed": true, "error_message": ""}
+{"task_id": 94, "passed": true, "error_message": ""}
+{"task_id": 95, "passed": true, "error_message": ""}
+{"task_id": 96, "passed": true, "error_message": ""}
+{"task_id": 97, "passed": true, "error_message": ""}
+{"task_id": 98, "passed": true, "error_message": ""}
+{"task_id": 99, "passed": true, "error_message": ""}
+{"task_id": 100, "passed": true, "error_message": ""}
+{"task_id": 101, "passed": true, "error_message": ""}
+{"task_id": 102, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 103, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 104, "passed": true, "error_message": ""}
+{"task_id": 105, "passed": true, "error_message": ""}
+{"task_id": 106, "passed": false, "error_message": "Error in test case 1: unsupported operand type(s) for +: 'int' and 'tuple'"}
+{"task_id": 108, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 109, "passed": true, "error_message": ""}
+{"task_id": 111, "passed": true, "error_message": ""}
+{"task_id": 113, "passed": true, "error_message": ""}
+{"task_id": 115, "passed": true, "error_message": ""}
+{"task_id": 116, "passed": true, "error_message": ""}
+{"task_id": 117, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 118, "passed": true, "error_message": ""}
+{"task_id": 119, "passed": true, "error_message": ""}
+{"task_id": 120, "passed": true, "error_message": ""}
+{"task_id": 123, "passed": true, "error_message": ""}
+{"task_id": 124, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 125, "passed": true, "error_message": ""}
+{"task_id": 126, "passed": false, "error_message": "Error in test case 1: sum() missing 1 required positional argument: 'b'"}
+{"task_id": 127, "passed": true, "error_message": ""}
+{"task_id": 128, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 129, "passed": true, "error_message": ""}
+{"task_id": 130, "passed": true, "error_message": ""}
+{"task_id": 131, "passed": true, "error_message": ""}
+{"task_id": 132, "passed": true, "error_message": ""}
+{"task_id": 133, "passed": true, "error_message": ""}
+{"task_id": 135, "passed": true, "error_message": ""}
+{"task_id": 137, "passed": true, "error_message": ""}
+{"task_id": 138, "passed": false, "error_message": "Error in test case 2: "}
+{"task_id": 139, "passed": true, "error_message": ""}
+{"task_id": 140, "passed": true, "error_message": ""}
+{"task_id": 141, "passed": true, "error_message": ""}
+{"task_id": 142, "passed": true, "error_message": ""}
+{"task_id": 143, "passed": false, "error_message": "Error in test case 3: "}
+{"task_id": 145, "passed": true, "error_message": ""}
+{"task_id": 160, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 161, "passed": true, "error_message": ""}
+{"task_id": 162, "passed": true, "error_message": ""}
+{"task_id": 163, "passed": true, "error_message": ""}
+{"task_id": 164, "passed": true, "error_message": ""}
+{"task_id": 165, "passed": true, "error_message": ""}
+{"task_id": 166, "passed": true, "error_message": ""}
+{"task_id": 167, "passed": true, "error_message": ""}
+{"task_id": 168, "passed": true, "error_message": ""}
+{"task_id": 170, "passed": true, "error_message": ""}
+{"task_id": 171, "passed": true, "error_message": ""}
+{"task_id": 172, "passed": true, "error_message": ""}
+{"task_id": 222, "passed": true, "error_message": ""}
+{"task_id": 223, "passed": true, "error_message": ""}
+{"task_id": 224, "passed": true, "error_message": ""}
+{"task_id": 226, "passed": true, "error_message": ""}
+{"task_id": 227, "passed": true, "error_message": ""}
+{"task_id": 228, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 229, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 230, "passed": true, "error_message": ""}
+{"task_id": 232, "passed": true, "error_message": ""}
+{"task_id": 233, "passed": true, "error_message": ""}
+{"task_id": 234, "passed": true, "error_message": ""}
+{"task_id": 235, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 237, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 238, "passed": true, "error_message": ""}
+{"task_id": 239, "passed": true, "error_message": ""}
+{"task_id": 240, "passed": true, "error_message": ""}
+{"task_id": 242, "passed": true, "error_message": ""}
+{"task_id": 244, "passed": false, "error_message": "Error in test case 3: "}
+{"task_id": 245, "passed": true, "error_message": ""}
+{"task_id": 246, "passed": true, "error_message": ""}
+{"task_id": 247, "passed": true, "error_message": ""}
+{"task_id": 248, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 249, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 250, "passed": true, "error_message": ""}
+{"task_id": 251, "passed": true, "error_message": ""}
+{"task_id": 252, "passed": false, "error_message": "Error in test case 1: 'int' object is not iterable"}
+{"task_id": 253, "passed": true, "error_message": ""}
+{"task_id": 255, "passed": true, "error_message": ""}
+{"task_id": 256, "passed": true, "error_message": ""}
+{"task_id": 257, "passed": true, "error_message": ""}
+{"task_id": 259, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 260, "passed": true, "error_message": ""}
+{"task_id": 261, "passed": true, "error_message": ""}
+{"task_id": 262, "passed": true, "error_message": ""}
+{"task_id": 264, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 265, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 266, "passed": true, "error_message": ""}
+{"task_id": 267, "passed": true, "error_message": ""}
+{"task_id": 268, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 269, "passed": true, "error_message": ""}
+{"task_id": 270, "passed": true, "error_message": ""}
+{"task_id": 271, "passed": true, "error_message": ""}
+{"task_id": 272, "passed": true, "error_message": ""}
+{"task_id": 273, "passed": true, "error_message": ""}
+{"task_id": 274, "passed": true, "error_message": ""}
+{"task_id": 276, "passed": true, "error_message": ""}
+{"task_id": 277, "passed": true, "error_message": ""}
+{"task_id": 278, "passed": false, "error_message": "Error in test case 1: count_first_elements() missing 1 required positional argument: 'element'"}
+{"task_id": 279, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 280, "passed": true, "error_message": ""}
+{"task_id": 281, "passed": true, "error_message": ""}
+{"task_id": 282, "passed": true, "error_message": ""}
+{"task_id": 283, "passed": true, "error_message": ""}
+{"task_id": 284, "passed": true, "error_message": ""}
+{"task_id": 285, "passed": true, "error_message": ""}
+{"task_id": 286, "passed": false, "error_message": "Error in test case 2: "}
+{"task_id": 287, "passed": true, "error_message": ""}
+{"task_id": 290, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 291, "passed": true, "error_message": ""}
+{"task_id": 292, "passed": true, "error_message": ""}
+{"task_id": 293, "passed": true, "error_message": ""}
+{"task_id": 294, "passed": true, "error_message": ""}
+{"task_id": 295, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 296, "passed": true, "error_message": ""}
+{"task_id": 297, "passed": true, "error_message": ""}
+{"task_id": 299, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 300, "passed": true, "error_message": ""}
+{"task_id": 301, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 304, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 305, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 306, "passed": true, "error_message": ""}
+{"task_id": 307, "passed": false, "error_message": "Error in test case 1: cannot pickle 'generator' object"}
+{"task_id": 308, "passed": true, "error_message": ""}
+{"task_id": 309, "passed": true, "error_message": ""}
+{"task_id": 310, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 311, "passed": false, "error_message": "Error in test case 3: "}
+{"task_id": 312, "passed": true, "error_message": ""}
+{"task_id": 388, "passed": true, "error_message": ""}
+{"task_id": 389, "passed": true, "error_message": ""}
+{"task_id": 390, "passed": true, "error_message": ""}
+{"task_id": 391, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 392, "passed": true, "error_message": ""}
+{"task_id": 393, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 394, "passed": true, "error_message": ""}
+{"task_id": 395, "passed": true, "error_message": ""}
+{"task_id": 396, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 397, "passed": true, "error_message": ""}
+{"task_id": 398, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 399, "passed": true, "error_message": ""}
+{"task_id": 400, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 401, "passed": true, "error_message": ""}
+{"task_id": 404, "passed": true, "error_message": ""}
+{"task_id": 405, "passed": false, "error_message": "Error in test case 1: 'in <string>' requires string as left operand, not tuple"}
+{"task_id": 406, "passed": true, "error_message": ""}
+{"task_id": 407, "passed": false, "error_message": "Error in test case 2: "}
+{"task_id": 408, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 409, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 410, "passed": true, "error_message": ""}
+{"task_id": 411, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 412, "passed": true, "error_message": ""}
+{"task_id": 413, "passed": true, "error_message": ""}
+{"task_id": 414, "passed": true, "error_message": ""}
+{"task_id": 415, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 417, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 418, "passed": true, "error_message": ""}
+{"task_id": 419, "passed": true, "error_message": ""}
+{"task_id": 420, "passed": true, "error_message": ""}
+{"task_id": 421, "passed": false, "error_message": "Error in test case 1: concatenate_tuple() missing 1 required positional argument: 'delimiter'"}
+{"task_id": 422, "passed": true, "error_message": ""}
+{"task_id": 424, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 425, "passed": true, "error_message": ""}
+{"task_id": 426, "passed": true, "error_message": ""}
+{"task_id": 427, "passed": true, "error_message": ""}
+{"task_id": 428, "passed": true, "error_message": ""}
+{"task_id": 429, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 430, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 431, "passed": false, "error_message": "Error in test case 2: "}
+{"task_id": 432, "passed": true, "error_message": ""}
+{"task_id": 433, "passed": true, "error_message": ""}
+{"task_id": 434, "passed": true, "error_message": ""}
+{"task_id": 435, "passed": true, "error_message": ""}
+{"task_id": 436, "passed": true, "error_message": ""}
+{"task_id": 437, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 438, "passed": false, "error_message": "Error in test case 3: "}
+{"task_id": 439, "passed": true, "error_message": ""}
+{"task_id": 440, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 441, "passed": true, "error_message": ""}
+{"task_id": 442, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 443, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 444, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 445, "passed": false, "error_message": "Error in test case 1: can't multiply sequence by non-int of type 'tuple'"}
+{"task_id": 446, "passed": false, "error_message": "Error in test case 1: name 'Counter' is not defined"}
+{"task_id": 447, "passed": true, "error_message": ""}
+{"task_id": 448, "passed": true, "error_message": ""}
+{"task_id": 450, "passed": true, "error_message": ""}
+{"task_id": 451, "passed": true, "error_message": ""}
+{"task_id": 452, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 453, "passed": true, "error_message": ""}
+{"task_id": 454, "passed": true, "error_message": ""}
+{"task_id": 455, "passed": true, "error_message": ""}
+{"task_id": 456, "passed": true, "error_message": ""}
+{"task_id": 457, "passed": true, "error_message": ""}
+{"task_id": 458, "passed": true, "error_message": ""}
+{"task_id": 459, "passed": true, "error_message": ""}
+{"task_id": 460, "passed": true, "error_message": ""}
+{"task_id": 461, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 462, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 463, "passed": true, "error_message": ""}
+{"task_id": 464, "passed": true, "error_message": ""}
+{"task_id": 465, "passed": true, "error_message": ""}
+{"task_id": 468, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 470, "passed": true, "error_message": ""}
+{"task_id": 471, "passed": true, "error_message": ""}
+{"task_id": 472, "passed": true, "error_message": ""}
+{"task_id": 473, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 474, "passed": true, "error_message": ""}
+{"task_id": 475, "passed": false, "error_message": "Error in test case 1: "}
+{"task_id": 476, "passed": true, "error_message": ""}
+{"task_id": 477, "passed": true, "error_message": ""}
+{"task_id": 478, "passed": true, "error_message": ""}
+{"task_id": 479, "passed": true, "error_message": ""}
