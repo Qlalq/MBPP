@@ -7,20 +7,20 @@ In order to adapt to the now mainstream jsonl representation (since I won't be u
 
 The conversion file is **par_jsonl.py** and the result of the **test-00000-of-00001.parquet** conversion is **MBPP.jsonl**
 
-``python par_jsonl.py``
+``$ python par_jsonl.py``
 ## Answer Generation
 Call the API to evaluate the LLM (you need to fill in the **API_key** before that)
 
-``python MBPP_completion.py``
+``$ python MBPP_completion.py``
 
 The sample result is **MBPP_samples.jsonl**
 ## Evaluation of results
 Run the python code on your own system and calculate Pass@1
 
-``python evaluate_MBPP.py``
+``$ python evaluate_MBPP.py``
 
 The generated result is **MBPP_results.jsonl**
 ## Sample Error Summary
-``python all_false.py``
+``$ python all_false.py``
 
 Error cases are summarized in **failed_tasks.txt**
