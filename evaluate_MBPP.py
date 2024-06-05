@@ -120,5 +120,5 @@ def calculate_passed_ratio(result_file: str) -> float:
 
 #大模型回答文件、MBPP源文件、要写入的结果文件
 evaluate_samples('MBPP_samples.jsonl', 'MBPP.jsonl', 'MBPP_results.jsonl')
-# 调用函数，计算并输出比例
+# 调用函数，计算并输出Pass@1
 print("Pass@1:",calculate_passed_ratio('MBPP_results.jsonl'))

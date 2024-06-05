@@ -1,0 +1,905 @@
+Task ID: 56
+Prompt: Write a python function to check if a given number is one less than twice its reverse. The beginning of the generated content is as follows:def check(n)
+Completion: def check(num):
+    return int(str(num)[::-1])
+
+def is_one_less_than_twice_its_reverse(num):
+    reversed_num = check(num)
+    return num == 2 * reversed_num - 1
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 57
+Prompt: Write a python function to find the largest number that can be formed with the given list of digits. The beginning of the generated content is as follows:def find_Max_Num(arr)
+Completion: def find_Max_Num(arr):
+    from functools import cmp_to_key
+    def compare(x, y):
+        if x + y > y + x:
+            return -1
+        elif x + y < y + x:
+            return 1
+        else:
+            return 0
+
+    arr = list(map(str, arr))
+    arr.sort(key=cmp_to_key(compare))
+    return ''.join(arr) if arr[0] != '0' else '0'
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 59
+Prompt: Write a function to find the nth octagonal number. The beginning of the generated content is as follows:def is_octagonal(n)
+Completion: def is_octagonal(n):
+    if n < 1:
+        return False
+    num = (3 + (1 + 8 * (n - 1))**0.5) / 4
+    return num.is_integer()
+
+def nth_octagonal_number(n):
+    if n < 1:
+        raise ValueError("n must be a positive integer")
+    return n * (3 * n - 2)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 72
+Prompt: Write a python function to check whether the given number can be represented as the difference of two squares or not. The beginning of the generated content is as follows:def dif_Square(n)
+Completion: def dif_Square(n):
+    if n < 0:
+        return False
+    for a in range(int(n**0.5) + 1):
+        b_squared = a**2 - n
+        if b_squared >= 0 and int(b_squared**0.5)**2 == b_squared:
+            return True
+    return False
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 83
+Prompt: Write a python function to find the character made by adding the ASCII value of all the characters of the given string modulo 26. The beginning of the generated content is as follows:def get_Char(strr)
+Completion: def get_Char(strr):
+    total_ascii = sum(ord(char) for char in strr)
+    modulo_26 = total_ascii % 26
+    result_char = chr(modulo_26 + ord('A'))
+    return result_char
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 102
+Prompt: Write a function to convert a snake case string to camel case string. The beginning of the generated content is as follows:def snake_to_camel(word)
+Completion: def snake_to_camel(word):
+    components = word.split('_')
+    return components[0] + ''.join(x.title() for x in components[1:])
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 103
+Prompt: Write a function to find the Eulerian number a(n, m). The beginning of the generated content is as follows:def eulerian_num(n, m)
+Completion: def eulerian_num(n, m):
+    if m >= n or m < 0:
+        return 0
+    if m == 0 and n == 0:
+        return 1
+    return (n - m) * eulerian_num(n - 1, m - 1) + (m + 1) * eulerian_num(n - 1, m)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 106
+Prompt: Write a function to append the given list to the given tuples. The beginning of the generated content is as follows:def add_lists(test_list, test_tup)
+Completion: def add_lists(test_list, test_tup):
+    return tuple(item + tuple(test_list) for item in test_tup)
+Error Message: Error in test case 1: unsupported operand type(s) for +: 'int' and 'tuple'
+
+----------------------------------------
+
+Task ID: 108
+Prompt: Write a function to merge three lists into a single sorted list. The beginning of the generated content is as follows:def merge_sorted_list(num1,num2,num3)
+Completion: import heapq
+def merge_sorted_list(num1, num2, num3):
+    merged_list = list(heapq.merge(num1, num2, num3))
+    return merged_list
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 117
+Prompt: Write a function to convert all possible convertible elements in a list of lists to floats. The beginning of the generated content is as follows:def list_to_float(test_list)
+Completion: def list_to_float(test_list):
+    def try_convert(element):
+        try:
+            return float(element)
+        except (ValueError, TypeError):
+            return element
+    
+    return [[try_convert(item) for item in sublist] for sublist in test_list]
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 124
+Prompt: Write a function to get the angle of a complex number. The beginning of the generated content is as follows:def angle_complex(a,b)
+Completion: import cmath
+def angle_complex(a, b):
+    complex_number = complex(a, b)
+    return cmath.phase(complex_number)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 126
+Prompt: Write a python function to find the sum of common divisors of two given numbers. The beginning of the generated content is as follows:def sum(a,b)
+Completion: def sum(a, b):
+    def find_divisors(n):
+        divisors = set()
+        for i in range(1, int(n**0.5) + 1):
+            if n % i == 0:
+                divisors.add(i)
+                divisors.add(n // i)
+        return divisors
+
+    divisors_a = find_divisors(a)
+    divisors_b = find_divisors(b)
+    common_divisors = divisors_a.intersection(divisors_b)
+    return sum(common_divisors)
+Error Message: Error in test case 1: sum() missing 1 required positional argument: 'b'
+
+----------------------------------------
+
+Task ID: 128
+Prompt: Write a function to find words that are longer than n characters from a given list of words. The beginning of the generated content is as follows:def long_words(n, str)
+Completion: def long_words(n, str):
+    result = [word for word in str if len(word) > n]
+    return result
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 138
+Prompt: Write a python function to check whether the given number can be represented as sum of non-zero powers of 2 or not. The beginning of the generated content is as follows:def is_Sum_Of_Powers_Of_Two(n)
+Completion: def is_Sum_Of_Powers_Of_Two(n):
+    while n > 0:
+        if n % 2 == 0:
+            n //= 2
+        else:
+            n -= 1
+        if n == 0:
+            return True
+    return False
+Error Message: Error in test case 2: 
+
+----------------------------------------
+
+Task ID: 143
+Prompt: Write a function to find number of lists present in the given tuple. The beginning of the generated content is as follows:def find_lists(Input)
+Completion: def find_lists(Input):
+    return sum(isinstance(item, list) for item in Input)
+Error Message: Error in test case 3: 
+
+----------------------------------------
+
+Task ID: 160
+Prompt: Write a function that returns integers x and y that satisfy ax + by = n as a tuple, or return None if no solution exists. The beginning of the generated content is as follows:def find_solution(a, b, n)
+Completion: def find_solution(a, b, n):
+    def gcd_extended(a, b):
+        if a == 0:
+            return b, 0, 1
+        gcd, x1, y1 = gcd_extended(b % a, a)
+        x = y1 - (b // a) * x1
+        y = x1
+        return gcd, x, y
+
+    gcd, x, y = gcd_extended(a, b)
+    if n % gcd != 0:
+        return None
+
+    x *= n // gcd
+    y *= n // gcd
+    return x, y
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 228
+Prompt: Write a python function to check whether all the bits are unset in the given range or not. The beginning of the generated content is as follows:def all_Bits_Set_In_The_Given_Range(n,l,r)
+Completion: def all_Bits_Set_In_The_Given_Range(n, l, r):
+    for i in range(l, r + 1):
+        if (n & (1 << i)) != 0:
+            return False
+    return True
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 229
+Prompt: Write a function that takes in an array and an integer n, and re-arranges the first n elements of the given array so that all negative elements appear before positive ones, and where the relative order among negative and positive elements is preserved. The beginning of the generated content is as follows:def re_arrange_array(arr, n)
+Completion: def re_arrange_array(arr, n):
+    neg = [x for x in arr[:n] if x < 0]
+    pos = [x for x in arr[:n] if x >= 0]
+    result = neg + pos + arr[n:]
+    arr[:n] = result[:n]
+    return arr
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 235
+Prompt: Write a python function to set all even bits of a given number. The beginning of the generated content is as follows:def even_bit_set_number(n)
+Completion: def even_bit_set_number(n):
+    bit_length = n.bit_length()
+    even_bit_mask = 0
+    for i in range(0, bit_length, 2):
+        even_bit_mask |= (1 << i)
+    return n | even_bit_mask
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 237
+Prompt: Write a function that takes in a list of tuples and returns a dictionary mapping each unique tuple to the number of times it occurs in the list. The beginning of the generated content is as follows:def check_occurences(test_list)
+Completion: from collections import Counter
+def check_occurences(test_list):
+    return dict(Counter(test_list))
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 244
+Prompt: Write a python function to find the next perfect square greater than a given number. The beginning of the generated content is as follows:def next_Perfect_Square(N)
+Completion: import math
+def next_Perfect_Square(N):
+    root = math.sqrt(N)
+    next_root = math.ceil(root)
+    next_perfect_square = next_root ** 2
+    return next_perfect_square
+Error Message: Error in test case 3: 
+
+----------------------------------------
+
+Task ID: 248
+Prompt: Write a function that takes in an integer n and calculates the harmonic sum of n-1. The beginning of the generated content is as follows:def harmonic_sum(n)
+Completion: def harmonic_sum(n):
+    if n < 2:
+        return 0
+    else:
+        return harmonic_sum(n - 1) + 1 / (n - 1)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 249
+Prompt: Write a function to find the intersection of two arrays. The beginning of the generated content is as follows:def intersection_array(array_nums1,array_nums2)
+Completion: def intersection_array(array_nums1, array_nums2):
+    set_nums1 = set(array_nums1)
+    set_nums2 = set(array_nums2)
+    intersection = list(set_nums1 & set_nums2)
+    return intersection
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 252
+Prompt: Write a python function to convert complex numbers to polar coordinates. The beginning of the generated content is as follows:def convert(numbers)
+Completion: def convert(numbers):
+    polar_coordinates = []
+    for number in numbers:
+        polar_coord = cmath.polar(number)
+        polar_coordinates.append(polar_coord)
+    return polar_coordinates
+Error Message: Error in test case 1: 'int' object is not iterable
+
+----------------------------------------
+
+Task ID: 259
+Prompt: Write a function to maximize the given two tuples. The beginning of the generated content is as follows:def maximize_elements(test_tup1, test_tup2)
+Completion: def maximize_elements(test_tup1, test_tup2):
+    if len(test_tup1) != len(test_tup2):
+        raise ValueError("Tuples must be of the same length")
+    return tuple(max(a, b) for a, b in zip(test_tup1, test_tup2))
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 264
+Prompt: Write a function to calculate a dog's age in dog's years. The beginning of the generated content is as follows:def dog_age(h_age)
+Completion: def dog_age(h_age):
+    if h_age <= 0:
+        return "Age must be a positive number"
+    elif h_age == 1:
+        return 15
+    elif h_age == 2:
+        return 24
+    else:
+        return 24 + (h_age - 2) * 5
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 265
+Prompt: Write a function that takes in a list and an integer n and splits a list for every nth element, returning a list of the resulting lists. The beginning of the generated content is as follows:def list_split(S, step)
+Completion: def list_split(S, step):
+    return [S[i:i + step] for i in range(0, len(S), step)]
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 268
+Prompt: Write a function to find the n'th star number. The beginning of the generated content is as follows:def find_star_num(n)
+Completion: def find_star_num(n):
+    if n <= 0:
+        return 0
+    return 6 * n * (n - 1) // 2 + 1
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 278
+Prompt: Write a function to find the number of elements that occurs before the tuple element in the given tuple. The beginning of the generated content is as follows:def count_first_elements(test_tup)
+Completion: def count_first_elements(test_tup, element):
+    if element in test_tup:
+        return test_tup.index(element)
+    else:
+        return -1
+Error Message: Error in test case 1: count_first_elements() missing 1 required positional argument: 'element'
+
+----------------------------------------
+
+Task ID: 279
+Prompt: Write a function to find the nth decagonal number. The beginning of the generated content is as follows:def is_num_decagonal(n)
+Completion: def is_num_decagonal(n):
+    if n < 1:
+        return False
+    for i in range(1, n + 1):
+        decagonal_num = i * (4 * i - 3)
+        if decagonal_num == n:
+            return True
+        if decagonal_num > n:
+            return False
+    return False
+
+def nth_decagonal_number(n):
+    if n < 1:
+        return None
+    return n * (4 * n - 3)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 286
+Prompt: Write a function to find the largest sum of a contiguous array in the modified array which is formed by repeating the given array k times. The beginning of the generated content is as follows:def max_sub_array_sum_repeated(a, n, k)
+Completion: def max_crossing_sum(a, n):
+    max_left = max_right = float('-inf')
+    temp_sum = 0
+    for i in range(n):
+        temp_sum += a[i % len(a)]
+        if temp_sum > max_left:
+            max_left = temp_sum
+    temp_sum = 0
+    for i in range(n-1, -1, -1):
+        temp_sum += a[i % len(a)]
+        if temp_sum > max_right:
+            max_right = temp_sum
+    return max_left + max_right - a[0] - a[-1]
+
+def max_sub_array_sum_repeated(a, n, k):
+    if n == 0 or k == 0:
+        return 0
+    kadane_sum = max_sum = curr_sum = a[0]
+    for i in range(1, n):
+        curr_sum = max(a[i % len(a)], curr_sum + a[i % len(a)])
+        max_sum = max(max_sum, curr_sum)
+    if k == 1:
+        return max_sum
+    prefix_sum = [0] * n
+    suffix_sum = [0] * n
+    prefix_sum[0] = curr_sum = a[0]
+    for i in range(1, n):
+        curr_sum += a[i % len(a)]
+        prefix_sum[i] = max(prefix_sum[i-1], curr_sum)
+    suffix_sum[n-1] = curr_sum = a[-1]
+    for i in range(n-2, -1, -1):
+        curr_sum += a[i % len(a)]
+        suffix_sum[i] = max(suffix_sum[i+1], curr_sum)
+    total_sum = sum(a)
+    if total_sum > 0:
+        return max(max_sum, prefix_sum[n-1] + (k-2) * total_sum + suffix_sum[0], max_crossing_sum(a, k * n))
+    else:
+        return max(max_sum, prefix_sum[n-1] + suffix_sum[0])
+Error Message: Error in test case 2: 
+
+----------------------------------------
+
+Task ID: 290
+Prompt: Write a function to find the list of maximum length in a list of lists. The beginning of the generated content is as follows:def max_length(list1)
+Completion: def max_length(list1):
+    if not list1:
+        return []
+    max_len = max(len(lst) for lst in list1)
+    return [lst for lst in list1 if len(lst) == max_len]
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 295
+Prompt: Write a function to return the sum of all divisors of a number. The beginning of the generated content is as follows:def sum_div(number)
+Completion: def sum_div(number):
+    if number < 1:
+        return 0
+    total = 0
+    for i in range(1, number + 1):
+        if number % i == 0:
+            total += i
+    return total
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 299
+Prompt: Write a function to calculate the maximum aggregate from the list of tuples. The beginning of the generated content is as follows:def max_aggregate(stdata)
+Completion: from collections import defaultdict
+def max_aggregate(stdata):
+    aggregate = defaultdict(int)
+    for name, score in stdata:
+        aggregate[name] += score
+    return max(aggregate, key=aggregate.get)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 301
+Prompt: Write a function to find the depth of a dictionary. The beginning of the generated content is as follows:def dict_depth(d)
+Completion: def dict_depth(d):
+    if not isinstance(d, dict) or not d:
+        return 0
+    return 1 + max(dict_depth(v) for v in d.values() if isinstance(v, dict))
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 304
+Prompt: Write a python function to find element at a given index after number of rotations. The beginning of the generated content is as follows:def find_Element(arr,ranges,rotations,index)
+Completion: def find_Element(arr, ranges, rotations, index):
+    total_rotations = sum((ranges[i][1] - ranges[i][0] + 1) for i in range(rotations)) % len(arr)
+    rotated_index = (index - total_rotations) % len(arr)
+    return arr[rotated_index]
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 305
+Prompt: Write a function to return two words from a list of words starting with letter 'p'. The beginning of the generated content is as follows:def start_withp(words)
+Completion: import re
+def start_withp(words):
+    p_words = [word for word in words if re.match(r'^p', word, re.IGNORECASE)]
+    return p_words[:2]
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 307
+Prompt: Write a function to get a colon of a tuple. The beginning of the generated content is as follows:def colon_tuplex(tuplex,m,n)
+Completion: from copy import deepcopy
+def colon_tuplex(tuplex, m, n):
+    return tuple(deepcopy(tuplex[i][n] for i in range(m)))
+Error Message: Error in test case 1: cannot pickle 'generator' object
+
+----------------------------------------
+
+Task ID: 310
+Prompt: Write a function to convert a given string to a tuple of characters. The beginning of the generated content is as follows:def string_to_tuple(str1)
+Completion: def string_to_tuple(str1):
+    return tuple(str1)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 311
+Prompt: Write a python function to set the left most unset bit. The beginning of the generated content is as follows:def set_left_most_unset_bit(n)
+Completion: def set_left_most_unset_bit(n):
+    if n == 0:
+        return 1
+    
+    num_bits = n.bit_length()
+    for i in range(num_bits - 1, -1, -1):
+        if not (n & (1 << i)):
+            return n | (1 << i)
+    
+    return n << 1
+Error Message: Error in test case 3: 
+
+----------------------------------------
+
+Task ID: 391
+Prompt: Write a function to convert more than one list to nested dictionary. The beginning of the generated content is as follows:def convert_list_dictionary(l1, l2, l3)
+Completion: def convert_list_dictionary(l1, l2, l3):
+    if not(len(l1) == len(l2) == len(l3)):
+        raise ValueError("All lists must have the same length.")
+    
+    nested_dict = {}
+    for i in range(len(l1)):
+        if l1[i] not in nested_dict:
+            nested_dict[l1[i]] = {}
+        if l2[i] not in nested_dict[l1[i]]:
+            nested_dict[l1[i]][l2[i]] = {}
+        nested_dict[l1[i]][l2[i]] = l3[i]
+    
+    return nested_dict
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 393
+Prompt: Write a function to find the list with maximum length. The beginning of the generated content is as follows:def max_length_list(input_list)
+Completion: def max_length_list(input_list):
+    if not input_list or not all(isinstance(i, list) for i in input_list):
+        raise ValueError("Input must be a list of lists")
+    
+    return max(input_list, key=len)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 396
+Prompt: Write a function to check whether the given string starts and ends with the same character or not. The beginning of the generated content is as follows:def check_char(string)
+Completion: import re  
+regex = r'^[a-z]$|^([a-z]).*\1$'
+def check_char(string):
+    return bool(re.match(regex, string, re.IGNORECASE))
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 398
+Prompt: Write a function to compute the sum of digits of each number of a given list. The beginning of the generated content is as follows:def sum_of_digits(nums)
+Completion: def sum_of_digits(nums):
+    def digit_sum(n):
+        return sum(int(digit) for digit in str(n))
+    
+    return [digit_sum(num) for num in nums]
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 400
+Prompt: Write a function to extract the number of unique tuples in the given list. The beginning of the generated content is as follows:def extract_freq(test_list)
+Completion: def extract_freq(test_list):
+    return len(set(test_list))
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 405
+Prompt: Write a function to check whether an element exists within a tuple. The beginning of the generated content is as follows:def check_tuplex(tuplex,tuple1)
+Completion: def check_tuplex(tuplex, tuple1):
+    return tuplex in tuple1
+Error Message: Error in test case 1: 'in <string>' requires string as left operand, not tuple
+
+----------------------------------------
+
+Task ID: 407
+Prompt: Write a function to create the next bigger number by rearranging the digits of a given number. The beginning of the generated content is as follows:def rearrange_bigger(n)
+Completion: def rearrange_bigger(n):
+    nums = list(str(n))
+    i = len(nums) - 2
+    while i >= 0 and nums[i] >= nums[i + 1]:
+        i -= 1
+    if i == -1:
+        return -1
+    j = len(nums) - 1
+    while nums[j] <= nums[i]:
+        j -= 1
+    nums[i], nums[j] = nums[j], nums[i]
+    nums = nums[:i + 1] + sorted(nums[i + 1:])
+    return int(''.join(nums))
+Error Message: Error in test case 2: 
+
+----------------------------------------
+
+Task ID: 408
+Prompt: Write a function to find k number of smallest pairs which consist of one element from the first array and one element from the second array. The beginning of the generated content is as follows:def push(i, j)
+Completion: import heapq
+def k_smallest_pairs(nums1, nums2, k):
+    if not nums1 or not nums2 or k == 0:
+        return []
+    
+    min_heap = []
+    for i in range(min(k, len(nums1))):
+        heapq.heappush(min_heap, (nums1[i] + nums2[0], i, 0))
+
+    result = []
+    while min_heap and len(result) < k:
+        sum_val, i, j = heapq.heappop(min_heap)
+        result.append((nums1[i], nums2[j]))
+        if j + 1 < len(nums2):
+            heapq.heappush(min_heap, (nums1[i] + nums2[j + 1], i, j + 1))
+    
+    return result
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 409
+Prompt: Write a function to find the minimum product from the pairs of tuples within a given list. The beginning of the generated content is as follows:def min_product_tuple(list1)
+Completion: def min_product_tuple(list1):
+    if not list1:
+        return None
+    min_product = float('inf')
+    min_pair = None
+    for i in range(len(list1)):
+        for j in range(i + 1, len(list1)):
+            product = list1[i][0] * list1[j][0] + list1[i][1] * list1[j][1]
+            if product < min_product:
+                min_product = product
+                min_pair = (list1[i], list1[j])
+    return min_pair
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 411
+Prompt: Write a function to convert the given snake case string to camel case string. The beginning of the generated content is as follows:def snake_to_camel(word)
+Completion: def snake_to_camel(word):
+    components = word.split('_')
+    return components[0] + ''.join(x.title() for x in components[1:])
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 415
+Prompt: Write a python function to find a pair with highest product from a given array of integers. The beginning of the generated content is as follows:def max_Product(arr)
+Completion: def max_Product(arr):
+    if len(arr) < 2:
+        return None
+
+    max1 = max2 = min1 = min2 = float('-inf')
+
+    for num in arr:
+        if num > max1:
+            max2 = max1
+            max1 = num
+        elif num > max2:
+            max2 = num
+        
+        if num < 0 and abs(num) > abs(min1):
+            min2 = min1
+            min1 = num
+        elif num < 0 and abs(num) > abs(min2):
+            min2 = num
+
+    positive_product = max1 * max2
+    negative_product = min1 * min2 if min1 != float('-inf') and min2 != float('-inf') else float('-inf')
+    
+    if positive_product >= negative_product:
+        return (max1, max2)
+    else:
+        return (min1, min2)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 417
+Prompt: Write a function to find common first element in given list of tuple. The beginning of the generated content is as follows:def group_tuples(Input)
+Completion: def group_tuples(Input):
+    from collections import defaultdict
+    common_first_element = defaultdict(list)
+    for element in Input:
+        common_first_element[element[0]].append(element)
+    return dict(common_first_element)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 421
+Prompt: Write a function to concatenate each element of tuple by the delimiter. The beginning of the generated content is as follows:def concatenate_tuple(test_tup)
+Completion: def concatenate_tuple(test_tup, delimiter):
+    return delimiter.join(test_tup)
+Error Message: Error in test case 1: concatenate_tuple() missing 1 required positional argument: 'delimiter'
+
+----------------------------------------
+
+Task ID: 424
+Prompt: Write a function to extract only the rear index element of each string in the given tuple. The beginning of the generated content is as follows:def extract_rear(test_tuple)
+Completion: def extract_rear(test_tuple):
+    return tuple(sub[-1] for sub in test_tuple)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 429
+Prompt: Write a function to extract the elementwise and tuples from the given two tuples. The beginning of the generated content is as follows:def and_tuples(test_tup1, test_tup2)
+Completion: def and_tuples(test_tup1, test_tup2):
+    if not test_tup1 or not test_tup2:
+        return ((),)
+    return tuple(a and b for a, b in zip(test_tup1, test_tup2))
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 430
+Prompt: Write a function to find the directrix of a parabola. The beginning of the generated content is as follows:def parabola_directrix(a, b, c)
+Completion: def parabola_directrix(a, b, c):
+    if a == 0:
+        raise ValueError("Coefficient 'a' must not be zero for a valid parabola.")
+    directrix_y = (1 - c) / (4 * a)
+    return directrix_y
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 431
+Prompt: Write a function that takes two lists and returns true if they have at least one common element. The beginning of the generated content is as follows:def common_element(list1, list2)
+Completion: def common_element(list1, list2):
+    for element in list1:
+        if element in list2:
+            return True
+    return False
+Error Message: Error in test case 2: 
+
+----------------------------------------
+
+Task ID: 437
+Prompt: Write a function to remove odd characters in a string. The beginning of the generated content is as follows:def remove_odd(str1)
+Completion: def remove_odd(str1):
+    return ''.join([char for i, char in enumerate(str1) if i % 2 == 0])
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 438
+Prompt: Write a function to count bidirectional tuple pairs. The beginning of the generated content is as follows:def count_bidirectional(test_list)
+Completion: def count_bidirectional(test_list):
+    bidirectional_pairs = set()
+    count = 0
+    for a, b in test_list:
+        if (b, a) in bidirectional_pairs:
+            count += 1
+        else:
+            bidirectional_pairs.add((a, b))
+    return count
+Error Message: Error in test case 3: 
+
+----------------------------------------
+
+Task ID: 440
+Prompt: Write a function to find the first adverb and their positions in a given sentence. The beginning of the generated content is as follows:def find_adverb_position(text)
+Completion: import re
+def find_adverb_position(text):
+    adverb_pattern = re.compile(r'\b\w+ly\b')
+    match = adverb_pattern.search(text)
+    if match:
+        return match.group(), match.start(), match.end()
+    return None, None, None
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 442
+Prompt: Write a function to find the ration of positive numbers in an array of integers. The beginning of the generated content is as follows:def positive_count(nums)
+Completion: def positive_count(nums):
+    positive_numbers = [num for num in nums if num > 0]
+    if len(nums) == 0:
+        return 0
+    return len(positive_numbers) / len(nums)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 443
+Prompt: Write a python function to find the largest negative number from the given list. The beginning of the generated content is as follows:def largest_neg(list1)
+Completion: def largest_neg(list1):
+    largest_negative = None
+    for number in list1:
+        if number < 0:
+            if largest_negative is None or number > largest_negative:
+                largest_negative = number
+    return largest_negative
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 444
+Prompt: Write a function to trim each tuple by k in the given tuple list. The beginning of the generated content is as follows:def trim_tuple(test_list, K)
+Completion: def trim_tuple(test_list, K):
+    return [tup[K:-K] if len(tup) >= 2*K else () for tup in test_list]
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 445
+Prompt: Write a function to perform index wise multiplication of tuple elements in the given two tuples. The beginning of the generated content is as follows:def index_multiplication(test_tup1, test_tup2)
+Completion: def index_multiplication(test_tup1, test_tup2):
+    if len(test_tup1) != len(test_tup2):
+        raise ValueError("Both tuples must be of the same length.")
+    return tuple(a * b for a, b in zip(test_tup1, test_tup2))
+Error Message: Error in test case 1: can't multiply sequence by non-int of type 'tuple'
+
+----------------------------------------
+
+Task ID: 446
+Prompt: Write a python function to count the occurence of all elements of list in a tuple. The beginning of the generated content is as follows:def count_Occurrence(tup, lst)
+Completion: def count_Occurrence(tup, lst):
+    counter = Counter(tup)
+    return {item: counter[item] for item in lst}
+Error Message: Error in test case 1: name 'Counter' is not defined
+
+----------------------------------------
+
+Task ID: 452
+Prompt: Write a function that gives loss amount on a sale if the given amount has loss else return 0. The beginning of the generated content is as follows:def loss_amount(actual_cost,sale_amount)
+Completion: def loss_amount(actual_cost, sale_amount):
+    if sale_amount < actual_cost:
+        return actual_cost - sale_amount
+    else:
+        return 0
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 461
+Prompt: Write a python function to count the upper case characters in a given string. The beginning of the generated content is as follows:def upper_ctr(str)
+Completion: def upper_ctr(s):
+    return sum(1 for c in s if c.isupper())
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 462
+Prompt: Write a function to find all possible combinations of the elements of a given list. The beginning of the generated content is as follows:def combinations_list(list1)
+Completion: def combinations_list(list1):
+    from itertools import combinations
+    all_combinations = []
+    for r in range(1, len(list1) + 1):
+        combinations_r = list(combinations(list1, r))
+        all_combinations.extend(combinations_r)
+    return all_combinations
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 468
+Prompt: Write a function to find the maximum product formed by multiplying numbers of an increasing subsequence of that array. The beginning of the generated content is as follows:def max_product(arr)
+Completion: def max_product(arr):
+    n = len(arr)
+    if n == 0:
+        return 0
+    
+    max_prod = [0] * n
+    max_prod[0] = arr[0]
+    
+    for i in range(1, n):
+        for j in range(i):
+            if arr[i] > arr[j]:
+                max_prod[i] = max(max_prod[i], max_prod[j] * arr[i])
+            else:
+                max_prod[i] = max(max_prod[i], arr[i])
+
+    return max(max_prod)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 473
+Prompt: Write a function to find the tuple intersection of elements in the given tuple list irrespective of their order. The beginning of the generated content is as follows:def tuple_intersection(test_list1, test_list2)
+Completion: def tuple_intersection(test_list1, test_list2):
+    set1 = set(map(tuple, test_list1))
+    set2 = set(map(tuple, test_list2))
+    return list(set1 & set2)
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
+Task ID: 475
+Prompt: Write a function to sort a dictionary by value. The beginning of the generated content is as follows:def sort_counter(dict1)
+Completion: from collections import Counter
+def sort_counter(dict1):
+    return dict(Counter(dict1).most_common())
+Error Message: Error in test case 1: 
+
+----------------------------------------
+
