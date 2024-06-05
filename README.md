@@ -21,4 +21,6 @@ Run the python code on your own system and calculate Pass@1
 
 The generated result is **MBPP_results.jsonl**
 ## Sample Error Summary
+``python all_false.py``
+
 Error cases are summarized in **failed_tasks.txt**
